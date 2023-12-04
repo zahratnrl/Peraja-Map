@@ -25,6 +25,10 @@
 </head>
 
 <body class="bg-dark">
+	<div class="card">
+		<div class="card-header">
+			<h2><i class="fa-solid fa-circle-plus"></i> Pelaporan Lampu Penerangan Jalan </h2>
+		</div>
 	<div class="container-fluid mt-2 mb-2">
 		<section class="content">
 			<div class="row">
@@ -35,18 +39,27 @@
 								<div class="row">
 									<div class="col-sm">
 										<div class="form-group">
-											<label for="nama"><strong>Nama Objek</strong></label>
-											<input type="text" class="form-control text-primary" id="nama" name="nama"
-												placeholder="Nama objek" value="">
+											<label for="deskripsi"><strong>Kabupaten/Kota</strong></label>
+											<textarea type="text" class="form-control text-primary" id="kabupaten/kota" name="kabupaten/kota"
+												placeholder="Sleman, Bantul, Kulon Progo (KP), Gunungkidul" rows="3"></textarea>
 										</div>
 									</div>
 								</div>
 								<div class="row">
 									<div class="col-sm">
 										<div class="form-group">
-											<label for="deskripsi"><strong>Deskripsi</strong></label>
-											<textarea type="text" class="form-control text-primary" id="deskripsi" name="deskripsi"
-												placeholder="Deskripsi" rows="3"></textarea>
+											<label for="deskripsi"><strong>Keluhan</strong></label>
+											<textarea type="text" class="form-control text-primary" id="keluhan" name="keluhan"
+												placeholder="Lampu Rusak, Lampu Mati, Lampu Redup" rows="3"></textarea>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm">
+										<div class="form-group">
+											<label for="nama"><strong>Tingkat Kerusakan</strong></label>
+											<input type="text" class="form-control text-primary" id="kerusakan" name="kerusakan"
+												placeholder="Tingkat Kerusakan (Kecil, Sedang, Besar)" value="">
 										</div>
 									</div>
 								</div>
@@ -204,7 +217,7 @@
 			.addTo(map);
 
 		// Submit to google spreadsheet
-		const scriptURL = 'https://script.google.com/macros/s/AKfycbyStuyGumeNdistRoXh7EeBaoPCm6RuD3dietwzFcUjm4Htxj1lJqe4aEWsClWnZtSj/exec';
+		const scriptURL = 'https://script.google.com/macros/s/AKfycbzA5kWIdZaF7YQiFra9NhKYe3DtuikW2MoTRiDPbP5xPTv7wc-u9k9AQqgbRsqC2zldoQ/exec';
 		const form = document.forms['submit-to-google-sheet'];
 		const btnSimpan = document.querySelector('.btn-simpan');
 		const btnLoading = document.querySelector('.btn-loading');
